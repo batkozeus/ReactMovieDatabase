@@ -12,9 +12,8 @@ class App extends React.Component {
 	state = {
 		movieCards: [],
 		emptyCard: 1,
-		watchlist: JSON.parse(localStorage.getItem('movie-mate-watchlist'))
+		watchlist: JSON.parse(localStorage.getItem('movie-mate-watchlist')) || []
 	}
-
 
 	componentWillMount() {
 		fetch(`https://api.themoviedb.org/3/movie/popular?api_key=bb699f1827e7eb5ccc45ecb88b66fc3c&language=en-US&page=1`)
@@ -38,11 +37,6 @@ class App extends React.Component {
 				movieCards: movies,
 			});
 
-			if (this.state.watchlist === null) {
-				this.setState({
-					watchlist: []
-				});
-			}
 		})
 		.catch(err => console.error(err));
 	}
