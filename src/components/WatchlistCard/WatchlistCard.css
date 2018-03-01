@@ -1,0 +1,62 @@
+.WatchlistCard {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 8px;
+	color: #fff;
+	margin-bottom: 16px;	
+	background-color: #0c161e;
+	border-radius: 2px;
+	box-shadow: 5px 5px 12px 0 rgba(83,77,77,.3);;
+	transition: all .3s ease-out;
+	cursor: pointer;
+}
+
+.WatchlistCard:hover {
+	box-shadow: 5px 5px 12px 0 #534d4d;
+}
+
+.WatchlistCard__img {
+	display: block;
+	width: 40%;
+	height: 100px;
+	object-fit: cover;
+}
+
+.WatchlistCard__body {
+	width: 55%;
+}
+
+.WatchlistCard__title {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.WatchlistCard__release, .WatchlistCard__rating {
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+.WatchlistCard__btn {
+	position: absolute;
+	outline: 0;
+	border: 0;
+	background-color: #e2b100;
+	cursor: pointer;
+	font-weight: 700;
+	bottom: 8px;
+	right: 8px;
+	width: 35px;
+	height: 35px;
+	font-size: 24px;
+	line-height: 35px;
+	border-radius: 4px;
+	text-transform: capitalize;
+	transition: background-color .1s linear;
+}
+
+.WatchlistCard__btn:hover {
+	background-color: #3f51b5;
+	color: #fff;
+}
